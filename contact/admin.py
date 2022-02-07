@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from contact.models import Signup, Todo
+from contact.models import  Todo, customerUsers
 
 # Register your models here.
 admin.site.register(Todo)
-admin.site.register(Signup)
+admin.site.register(customerUsers)

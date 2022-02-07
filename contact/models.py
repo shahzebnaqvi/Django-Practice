@@ -11,7 +11,7 @@ class Todo(models.Model):
     def __str___(self):
         return self.title
         # signup table
-class Signup(models.Model):
+class customerUsers(models.Model):
     number = models.CharField(max_length = 100)
     name = models.CharField(max_length = 100)
     email = models.CharField(max_length = 100, default='SOME STRING')

@@ -9,9 +9,9 @@ urlpatterns = [
     path("update/<int:pk>/",views.UpdateTodoAPIView.as_view(),name="update_todo"),
     path("delete/<int:pk>/",views.DeleteTodoAPIView.as_view(),name="delete_todo"),
     # user signup
-    path("signup",views.ListSignupAPIView.as_view(),name="todo_list"),
-    path("createsignup/", views.CreateSignupAPIView.as_view(),name="todo_create"),
-    path("updatesignup/<int:pk>/",views.UpdateSignupAPIView.as_view(),name="update_todo"),
-    path("deletesignup/<int:pk>/",views.DeleteSignupAPIView.as_view(),name="delete_todo")
+    path("signup",views.ListcustomerUsersAPIView.as_view(),name="todo_list"),
+    path("createsignup/", views.CreatecustomerUsersAPIView.as_view(),name="todo_create"),
+    path("updatesignup/<int:pk>/",views.UpdatecustomerUsersAPIView.as_view(),name="update_todo"),
+    path("deletesignup/<int:pk>/",views.DeletecustomerUsersAPIView.as_view(),name="delete_todo")
 
 ]
