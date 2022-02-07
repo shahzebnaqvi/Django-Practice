@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from django.db import models
 
 # Create your models here.
@@ -12,9 +13,9 @@ class Todo(models.Model):
         return self.title
         # signup table
 class Signup(models.Model):
-    number = models.CharField(max_length = 100)
-    name = models.CharField(max_length = 100)
-    email = models.EmailField(max_length = 100)
+    number = models.CharField(max_length = 100, default="False")
+    name = models.CharField(max_length = 100, default="False")
+    email = models.CharField(max_length = 100, default="False")
   
     def __str___(self):
-        return self.title
+        return self.number
