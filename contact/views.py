@@ -10,7 +10,7 @@ from rest_framework.generics import CreateAPIView
 from rest_framework.generics import DestroyAPIView
 from rest_framework.generics import UpdateAPIView
 from contact.serializers import TodoSerializer
-from contact.models import Todo
+from contact.models import Signup, Todo
 
 # Create your views here.
 class ListTodoAPIView(ListAPIView):
@@ -31,4 +31,25 @@ class UpdateTodoAPIView(UpdateAPIView):
 class DeleteTodoAPIView(DestroyAPIView):
     """This endpoint allows for deletion of a specific Todo from the database"""
     queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+
+# user signup view api
+class ListSignupAPIView(ListAPIView):
+    """This endpoint list all of the available todos from the database"""
+    queryset = Signup.objects.all()
+    serializer_class = TodoSerializer
+
+class CreateSignupAPIView(CreateAPIView):
+    """This endpoint allows for creation of a todo"""
+    queryset = Signup.objects.all()
+    serializer_class = TodoSerializer
+
+class UpdateSignupAPIView(UpdateAPIView):
+    """This endpoint allows for updating a specific todo by passing in the id of the todo to update"""
+    queryset = Signup.objects.all()
+    serializer_class = TodoSerializer
+
+class DeleteSignupAPIView(DestroyAPIView):
+    """This endpoint allows for deletion of a specific Todo from the database"""
+    queryset = Signup.objects.all()
     serializer_class = TodoSerializer
