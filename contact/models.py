@@ -15,6 +15,8 @@ class customerUsers(models.Model):
     number = models.CharField(max_length = 100)
     name = models.CharField(max_length = 100)
     email = models.CharField(max_length = 100, default='SOME STRING')
+    password = models.CharField(max_length = 100)
+
   
     def __str___(self):
         return self.number
